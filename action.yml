@@ -3,11 +3,13 @@ description: "Add a label when a new PR is opened."
 author: "Dipesh Jadhav"
 
 inputs:
-  name:
-    description: "Name of the label to add"
+  gh-token:
+    description: "GitHub token for authetication"
     required: true
-    default: "world"
-    
+  label:
+    description: "Label to be added to the PR"
+    required: true  
+
 runs:
   using: "node16"
   main: "dist/index.js"
