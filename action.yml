@@ -1,0 +1,7 @@
+name: "Add Label a new Pull Requests"
+description: "Add a label when a new PR is opened."
+author: "Dipesh Jadhav"
+
+runs:
+  using: "node16"
+  main: "dist/index.js"
