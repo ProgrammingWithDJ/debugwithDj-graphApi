@@ -2,7 +2,7 @@ name: "DJ Hello"
 
 on:
   pull_request:
-    types: [opened, synchronize]
+    types: [opened, reopened]
     branches:
       - main
       - master
