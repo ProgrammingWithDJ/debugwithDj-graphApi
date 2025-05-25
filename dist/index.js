@@ -31833,10 +31833,9 @@ var __webpack_exports__ = {};
 var exports = __webpack_exports__;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.run = run;
 const core_1 = __nccwpck_require__(7484);
 const github_1 = __nccwpck_require__(3228);
-const name = (0, core_1.getInput)("name");
-console.log(`Hello ${name}`);
 async function run() {
     var _a;
     const token = (0, core_1.getInput)("gh-token");
@@ -31845,7 +31844,7 @@ async function run() {
     const pullRequest = github_1.context.payload.pull_request;
     try {
         if (!pullRequest) {
-            throw new Error("No pull request found in the context");
+            throw new Error("This action can only be run on Pull Requests");
         }
         await octokit.rest.issues.addLabels({
             owner: github_1.context.repo.owner,
